@@ -1,0 +1,25 @@
+{
+    "name": "AWS CLI and Terraform Development Environment",
+    "dockerFile": "Dockerfile",
+    "context": "..",
+    "appPort": [],
+    "postCreateCommand": "echo 'Development environment ready!'",
+    "remoteUser": "root",
+    "features": {
+      "ghcr.io/devcontainers/features/git:1": {},
+      "ghcr.io/devcontainers/features/github-cli:1": {}
+    },
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "hashicorp.terraform", // Terraform extension
+          "ms-azuretools.vscode-docker", // Docker extension
+          "amazonwebservices.aws-toolkit-vscode" // AWS Toolkit extension
+        ]
+      }
+    },
+    "settings": {
+      "terminal.integrated.defaultProfile.linux": "bash",
+      "terraform.path": "/usr/bin/terraform"
+    }
+  }
